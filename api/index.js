@@ -14,6 +14,10 @@ mongoose.connect(process.env.MONGO)
 
 const app = express()
 
+app.get('/',(req,res) =>{
+   res.json({ message: "welcome to my API"})
+})
+
 
 app.listen(3000,()=>{
     console.log('server is running on port 3000 !!!')
